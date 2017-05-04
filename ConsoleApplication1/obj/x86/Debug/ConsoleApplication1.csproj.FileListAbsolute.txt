@@ -1,0 +1,5 @@
+F:\C++\charp1\Test_1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+F:\C++\charp1\Test_1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+F:\C++\charp1\Test_1\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.exe
+F:\C++\charp1\Test_1\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.pdb
+F:\C++\charp1\Test_1\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
