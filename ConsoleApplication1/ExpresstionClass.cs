@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 //https://blog.csdn.net/anckly/article/details/900674
+//后缀表达式解释及用法
+//https://www.cnblogs.com/james111/p/7027820.html
 namespace ConsoleApplication1
 {
     public class ExpresstionClass
