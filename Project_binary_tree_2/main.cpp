@@ -8,7 +8,7 @@ int main()
 	btnode * b;
 	b = new btnode;
 	char str[Maxsize];
-	cout << "算式计算器[张安源]" << endl;
+	cout << "算式计算器" << endl;
 	while (true)
 	{
 		cout << "[Type \"exit\" to exit]" << endl << "请输入你要求的表达式：" << endl;

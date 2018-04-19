@@ -7,3 +7,4 @@ E:\mywork\github\first-c++\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1
 E:\mywork\github\first-c++\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.pdb
 E:\mywork\github\first-c++\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
 E:\mywork\github\first-c++\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+E:\mywork\github\first-c++\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
