@@ -44,12 +44,11 @@ namespace ConsoleApplication1
             //DateTime dt = Convert.ToDateTime("2014-02-02");
             //Console.WriteLine((int)DateTime.Now.AddDays(4).DayOfWeek);
             //Console.ReadKey();
-            string exp="1+2*3-4/5";
+            //string exp="1+2*3-4/5";
+            string exp = "1+((2+3)*4)-5";
             ExpresstionClass str = new ExpresstionClass(exp);
             Console.WriteLine(str.ExpValue().ToString());
             Console.ReadKey();
         }
-
-        
     }
 }

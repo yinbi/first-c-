@@ -106,19 +106,37 @@ namespace ConsoleApplication1
             return exp_arraylist;
         }
 
-        //返回运算符的优先级
+        //返回运算符的优先级 
         private int Operatororder(string op)
         {
+            //switch (op)
+            //{
+            //    case "*":
+            //        return 3;
+            //        break;
+            //    case "/":
+            //        return 4;
+            //        break;
+            //    case "+":
+            //        return 1;
+            //        break;
+            //    case "-":
+            //        return 2;
+            //        break;
+            //    default:
+            //        return 0;
+            //        break;
+            //}
             switch (op)
             {
                 case "*":
-                    return 3;
+                    return 4;
                     break;
                 case "/":
                     return 4;
                     break;
                 case "+":
-                    return 1;
+                    return 2;
                     break;
                 case "-":
                     return 2;
