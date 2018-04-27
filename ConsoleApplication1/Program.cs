@@ -45,10 +45,18 @@ namespace ConsoleApplication1
             //Console.WriteLine((int)DateTime.Now.AddDays(4).DayOfWeek);
             //Console.ReadKey();
             //string exp="1+2*3-4/5";
-            string exp = "1+((2+3)*4)-5";
-            ExpresstionClass str = new ExpresstionClass(exp);
-            Console.WriteLine(str.ExpValue().ToString());
-            Console.ReadKey();
+            //string exp = "1+((2+3)*4)-5";
+            //ExpresstionClass str = new ExpresstionClass(exp);
+            //Console.WriteLine(str.ExpValue().ToString());
+            Console.WriteLine("[计算器]");
+            string exp = "";
+            while (exp != "exit")
+            {
+                Console.WriteLine("请输入计算的表达式:");
+                exp = Console.ReadLine();
+                FourOperationsByStack fourOp = new FourOperationsByStack(exp);
+                Console.WriteLine(fourOp.ExpValue());
+            }
         }
     }
 }
