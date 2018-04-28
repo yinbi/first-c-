@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExpresstionClass.cs" />
+    <Compile Include="FourOperationsByBinaryTree.cs" />
     <Compile Include="FourOperationsByStack.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
