@@ -48,14 +48,34 @@ namespace ConsoleApplication1
             //string exp = "1+((2+3)*4)-5";
             //ExpresstionClass str = new ExpresstionClass(exp);
             //Console.WriteLine(str.ExpValue().ToString());
+
+            //Stack
+            //Console.WriteLine("[计算器]");
+            //string exp = "";
+            //while (exp != "exit")
+            //{
+            //    Console.WriteLine("请输入计算的表达式:");
+            //    exp = Console.ReadLine();
+            //    FourOperationsByStack fourOp = new FourOperationsByStack(exp);
+            //    Console.WriteLine(fourOp.ExpValue());
+            //}
+
+            //BinaryTree
             Console.WriteLine("[计算器]");
             string exp = "";
             while (exp != "exit")
             {
                 Console.WriteLine("请输入计算的表达式:");
                 exp = Console.ReadLine();
-                FourOperationsByStack fourOp = new FourOperationsByStack(exp);
-                Console.WriteLine(fourOp.ExpValue());
+                //FourOperationsByStack fourOp = new FourOperationsByStack(exp);
+                //Console.WriteLine(fourOp.ExpValue());
+                Tree tree=new Tree();
+                FourOperationsByBinaryTree fourOperations = new FourOperationsByBinaryTree(exp);
+                int tail = fourOperations.ToOpArrayList();// Sortop(str, Aop, index);//整理得到Aop的结构数组
+
+                fourOperations.CreateTree(tree, exp, 0, exp.Length, tail);
+                double result = fourOperations.Comp(tree);
+                Console.WriteLine(result);
             }
         }
     }
