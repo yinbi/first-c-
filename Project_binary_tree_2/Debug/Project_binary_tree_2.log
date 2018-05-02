@@ -1,19 +1,19 @@
-﻿Build started 2018-04-11 1:41:39.
-     1>Project "F:\GitHub\first-c-\Project_binary_tree_2\Project_binary_tree_2.vcxproj" on node 2 (Build target(s)).
+﻿生成启动时间为 2018/5/2 18:06:05。
+     1>项目“E:\mywork\github\first-c++\Project_binary_tree_2\Project_binary_tree_2.vcxproj”在节点 2 上(Rebuild 个目标)。
      1>ClCompile:
-         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp op.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp op.cpp
          op.cpp
          main.cpp
-         Generating Code...
+         正在生成代码...
        ResourceCompile:
          C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /l"0x0409" /nologo /fo"Debug\Project_binary_tree_2.res" Project_binary_tree_2.rc 
        Link:
-         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\GitHub\first-c-\Debug\Project_binary_tree_2.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\GitHub\first-c-\Debug\Project_binary_tree_2.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\GitHub\first-c-\Debug\Project_binary_tree_2.lib" /MACHINE:X86 Debug\Project_binary_tree_2.res
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\mywork\github\first-c++\Debug\Project_binary_tree_2.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\mywork\github\first-c++\Debug\Project_binary_tree_2.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\mywork\github\first-c++\Debug\Project_binary_tree_2.lib" /MACHINE:X86 Debug\Project_binary_tree_2.res
          Debug\main.obj
          Debug\op.obj
-         Project_binary_tree_2.vcxproj -> F:\GitHub\first-c-\Debug\Project_binary_tree_2.exe
-     1>Done Building Project "F:\GitHub\first-c-\Project_binary_tree_2\Project_binary_tree_2.vcxproj" (Build target(s)).
+         Project_binary_tree_2.vcxproj -> E:\mywork\github\first-c++\Debug\Project_binary_tree_2.exe
+     1>已完成生成项目“E:\mywork\github\first-c++\Project_binary_tree_2\Project_binary_tree_2.vcxproj”(Rebuild 个目标)的操作。
 
-Build succeeded.
+生成成功。
 
-Time Elapsed 00:00:07.59
+已用时间 00:00:01.47

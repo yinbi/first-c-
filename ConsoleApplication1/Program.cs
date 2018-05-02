@@ -41,6 +41,7 @@ namespace ConsoleApplication1
             //}
             #endregion
 
+            #region
             //DateTime dt = Convert.ToDateTime("2014-02-02");
             //Console.WriteLine((int)DateTime.Now.AddDays(4).DayOfWeek);
             //Console.ReadKey();
@@ -48,6 +49,7 @@ namespace ConsoleApplication1
             //string exp = "1+((2+3)*4)-5";
             //ExpresstionClass str = new ExpresstionClass(exp);
             //Console.WriteLine(str.ExpValue().ToString());
+            #endregion
 
             //Stack
             //Console.WriteLine("[计算器]");
@@ -67,15 +69,43 @@ namespace ConsoleApplication1
             {
                 Console.WriteLine("请输入计算的表达式:");
                 exp = Console.ReadLine();
-                //FourOperationsByStack fourOp = new FourOperationsByStack(exp);
-                //Console.WriteLine(fourOp.ExpValue());
-                Tree tree=new Tree();
+
+                Tree tree = new Tree();
                 FourOperationsByBinaryTree fourOperations = new FourOperationsByBinaryTree(exp);
                 int tail = fourOperations.ToOpArrayList();// Sortop(str, Aop, index);//整理得到Aop的结构数组
 
-                fourOperations.CreateTree(tree, exp, 0, exp.Length, tail);
+                //fourOperations.CreateTree(tree, exp, 0, exp.Length, tail);
+                fourOperations.CreateTree(tree, 0, exp.Length - 1, tail);
                 double result = fourOperations.Comp(tree);
                 Console.WriteLine(result);
+            }
+
+            //Tree tree = new Tree();
+            //tree.DATE.Operator = "+";
+            //CreateTree(tree, 4);
+
+            //Tree tree1 = new Tree();
+            //tree1.DATE.Operator = "-";
+            //tree.LTree = tree1;
+
+            //Tree tree2 = new Tree();
+            //tree2.DATE.Operator = "*";
+            //tree1.LTree = tree2;
+
+            //Tree tree3 = new Tree();
+            //tree3.DATE.Operator = "/";
+            //tree2.LTree = tree3;
+        }
+
+        public static void CreateTree(Tree tree, int i)
+        {
+            if (i > 0)
+            {
+                Tree t = new Tree();
+                tree.DATE.Operator = i.ToString();
+                tree.LTree = t;
+                i--;
+                CreateTree(tree.LTree, i);
             }
         }
     }
