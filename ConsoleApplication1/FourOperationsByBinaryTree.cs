@@ -37,11 +37,13 @@ namespace ConsoleApplication1
         public int index = 0;
         public string expression;
         public char[] str;
+        public op[] Aop;
         public FourOperationsByBinaryTree(string expression)
         {
             li = new ArrayList();
             this.expression = expression;
             this.str = expression.ToCharArray();
+            Aop = new op[100];
         }
         
         public int ToOpArrayList()
@@ -63,11 +65,14 @@ namespace ConsoleApplication1
                 }
                 else if (expchar == "+" || expchar == "-" || expchar == "*" || expchar == "/")
                 {
-                    op Aop;
-                    Aop.index = ind;
-                    Aop.opration = expchar;
-                    Aop.locate = i;
-                    li.Add(Aop);
+                    //op Aop;
+                    //Aop.index = ind;
+                    //Aop.opration = expchar;
+                    //Aop.locate = i;
+                    //li.Add(Aop);
+                    Aop[j].opration = expchar;
+                    Aop[j].index = ind;
+                    Aop[j].locate = i;
                     j++;
                 }
                 index = (index > ind) ? index : ind;
@@ -148,38 +153,39 @@ namespace ConsoleApplication1
                     //从后往前找，才符合运算的法则，前面先算后面后算
                     for (int j = tail - 1; j >= 0; j--)
                     {
-                        op Aop = (op)li[j];
-                        if (Aop.index == temp && ((Aop.opration == "+") || (Aop.opration == "-")) && Aop.locate >= p && Aop.locate <= q)
+                        //op Aop = (op)li[j];
+                        if (Aop[j].index == temp && ((Aop[j].opration == "+") || (Aop[j].opration == "-")) && Aop[j].locate >= p && Aop[j].locate <= q)
                         {
                             find++;
-                            Aop.index = -1;//标志这个已经被找过了
-                            Tree lt, rt;
-                            lt = new Tree();
-                            rt = new Tree();
+                            Aop[j].index = -1;//标志这个已经被找过了
+                            //li.RemoveAt(j);
+                            //li.Add(Aop);
+                            Tree lt = new Tree();
+                            Tree rt = new Tree();
                             tree.LTree = lt;
                             tree.RTree = rt;
-                            tree.DATE.Operator = Aop.opration;
-                            CreateTree(tree.LTree, p, Aop.locate - 1, tail);
-                            CreateTree(tree.RTree, Aop.locate + 1, q, tail);
+                            tree.DATE.Operator = Aop[j].opration;
+                            Log.Write("log", string.Format("p:{0},q:{1}", p, Aop[j].locate - 1));
+                            CreateTree(tree.LTree, p, Aop[j].locate - 1, tail);
+                            CreateTree(tree.RTree, Aop[j].locate + 1, q, tail);
                         }
                     }
                     if (find == 0)
                     {
                         for (int j = tail - 1; j >= 0; j--)
                         {
-                            op Aop = (op)li[j];
-                            if (Aop.index == temp && ((Aop.opration == "*") || (Aop.opration == "/")) && Aop.locate >= p && Aop.locate <= q)
+                            if (Aop[j].index == temp && ((Aop[j].opration == "*") || (Aop[j].opration == "/")) && Aop[j].locate >= p && Aop[j].locate <= q)
                             {
                                 find++;
-                                Aop.index = -1;//标志这个已经被找过了
+                                Aop[j].index = -1;//标志这个已经被找过了
                                 Tree lt, rt;
                                 lt = new Tree();
                                 rt = new Tree();
                                 tree.LTree = lt;
                                 tree.RTree = rt;
-                                tree.DATE.Operator = Aop.opration;
-                                CreateTree(tree.LTree, p, Aop.locate - 1, tail);
-                                CreateTree(tree.RTree, Aop.locate + 1, q, tail);
+                                tree.DATE.Operator = Aop[j].opration;
+                                CreateTree(tree.LTree, p, Aop[j].locate - 1, tail);
+                                CreateTree(tree.RTree, Aop[j].locate + 1, q, tail);
                             }
                         }
                     }
